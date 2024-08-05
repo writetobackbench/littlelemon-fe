@@ -13,7 +13,7 @@ const Header = () => {
       <h3>
         We are a family owned Mediterranean restaurant, focused on tradional recipes served with a modern twist.
       </h3>
-      <button className="main-button">Reserve a table</button>
+      <button className="main-button" >Reserve a table</button>
 
     </div>
     <img src={restaurant}alt="Description" />
@@ -21,6 +21,5 @@ const Header = () => {
   </>
   )
 };
-
 
 export default Header;

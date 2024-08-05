@@ -1,18 +1,34 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
+import AboutPage from './AboutPage';
+import BookingPage from './BookingPage';
+import OrderPage from './OrderPage';
+import LoginPage from './LoginPage';
+import MenuPage from './MenuPage';
+
 import Main from './Main';
-import Header from './Header';
 import Footer from './Footer';
+import Header from './Header';
 
 const App = () => {
   return (
-    <div className="grid-container">
-      <Nav />
-      <Header/>
-      <Main />
-      <Footer />
-    </div>
+    <Router>
+      <div className="grid-container">
+        <Nav/>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Main/>} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/booking" element={<BookingPage />} />
+          <Route path="/order" element={<OrderPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
+
 export default App;

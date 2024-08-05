@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import Logo_1 from'./icons_assets/Logo_1.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -15,12 +16,12 @@ const Footer = () => {
         {/* Column 2: Navigation links */}
         <div className="footer-nav">
           <h3>Navigation</h3>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#menu">Menu</a>
-          <a href="#reservation">Reservation</a>
-          <a href="#order">Order</a>
-          <a href="#login">Login</a>
+          <li><Link to="/">Home</Link></li>
+         <li><Link to="/about">About</Link></li>
+        <li><Link to="/menu">Menu</Link></li>
+        <li><Link to="/booking">Booking</Link></li>
+        <li><Link to="/order">Order</Link></li>
+        <li><Link to="/login">Login</Link></li>
         </div>
 
         {/* Column 3: Social media links */}
