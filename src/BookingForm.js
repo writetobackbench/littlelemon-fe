@@ -1,23 +1,17 @@
 import React, { useState } from 'react';
 import './BookingForm.css';
 
-const BookingForm = () => {
-  // Define state variables for each form field
+const BookingForm = ({ availableTimes, onBookingSubmit }) => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
 
-  // Define a stateful array for available times
-  const [availableTimes, setAvailableTimes] = useState([
-    '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-  ]);
-
-  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission logic here
-    console.log({ date, time, guests, occasion });
+    if (time) { // Ensure time is selected
+      onBookingSubmit({ date, time, guests, occasion });
+    }
   };
 
   return (
@@ -65,6 +59,6 @@ const BookingForm = () => {
       <input type="submit" value="Make Your reservation" />
     </form>
   );
-}
+};
 
 export default BookingForm;
