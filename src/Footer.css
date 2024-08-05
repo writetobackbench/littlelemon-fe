@@ -1,0 +1,72 @@
+.footer {
+  display: grid;
+  grid-template-rows: auto auto; /* 2 rows */
+  gap: 20px; /* Space between rows */
+  padding: 30px;
+  background-color: #4CAF50;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* Row 1: 3 columns */
+.footer-row-1 {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr; /* 3 columns */
+  gap: 100px;
+
+}
+
+/* Column 1: Logo */
+.footer-logo {
+  display: flex;
+  align-items:baseline;
+}
+
+.footer-logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* Column 2: Navigation links */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:flex-start;
+
+}
+
+.footer-nav a {
+  color: white;
+
+  text-decoration: none;
+  margin: 8px 0 5px 0; /* Vertical space between links */
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Column 3: Social media links */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+}
+
+.footer-social a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0; /* Vertical space between links */
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
+}
+
+/* Row 2: Copyright */
+.footer-copyright {
+  text-align: left;
+}

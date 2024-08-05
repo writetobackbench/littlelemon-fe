@@ -1,19 +1,18 @@
-import './App.css';
-import Header from './Header.js';
-import Nav from './Nav.js'; './Nav.js';
-import Main from'./Main.js';
-import Footer from'./Footer.js';
 import React from 'react';
+import './App.css';
+import Nav from './Nav';
+import Main from './Main';
+import Header from './Header';
+import Footer from './Footer';
 
-function App() {
+const App = () => {
   return (
-   <>
- <Header/>
- <Nav/>
- <Main/>
- <Footer/>
-   </>
-  )
+    <div className="grid-container">
+      <Nav />
+      <Header/>
+      <Main />
+      <Footer />
+    </div>
+  );
 }
-
 export default App;

@@ -1,10 +1,38 @@
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: rgb(229, 33, 33);
-  }
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:white;
+  color: #001c00;
+  padding: 10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.logo {
+  width: 200px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.nav-links {
+  list-style: none; /* Remove bullets */
+  display: flex; /* Display items in a row */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 15px; /* Space between links */
+}
+
+.nav-links a {
+  color: rgb(0, 28, 9);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+
+.nav-links a:hover {
+  background-color: #575757; /* Change background on hover */
+}
