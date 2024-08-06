@@ -1,25 +1,44 @@
+// src/BookingPage.js
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BookingForm from './BookingForm';
-import { fetchAPI } from './utils/api';
+import { fetchAPI, submitAPI } from './utils/api';
 
 const BookingPage = () => {
   const [date, setDate] = useState('');
   const [availableTimes, setAvailableTimes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchAvailableTimes = async () => {
-      if (date) {
-        const times = await fetchAPI(date);
-        console.log('Fetched available times:', times); // Log fetched times
-        setAvailableTimes(times);
+    if (date) {
+      const dateObj = new Date(date); // Ensure date is a Date object
+      if (fetchAPI) {
+        const fetchAvailableTimes = async () => {
+          const times = await fetchAPI(dateObj);
+          console.log('Fetched available times:', times);
+          setAvailableTimes(times);
+        };
+        fetchAvailableTimes();
       }
-    };
-    fetchAvailableTimes();
+    }
   }, [date]);
 
+  const submitForm = async (formData) => {
+    try {
+      const result = await submitAPI(formData);
+      if (result) {
+        navigate('/confirmed-booking'); // Navigate to confirmation page
+      } else {
+        // Handle failure case here
+        console.error('Submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
   const handleBookingSubmit = (formData) => {
-    console.log('Booking data:', formData);
-    // Handle form submission logic here
+    submitForm(formData);
   };
 
   return (

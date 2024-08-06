@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test API</title>
+  <script src="https://raw.githubusercontent.com/courseraap/capstone/main/api.js"></script>
+</head>
+<body>
+  <script>
+    (async () => {
+      const date = '2023-01-01'; // Use a date you expect to get results for
+      const times = await window.fetchAPI(date);
+      console.log('Available times for', date, ':', times);
+    })();
+  </script>
+</body>
+</html>
