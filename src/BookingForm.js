@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BookingForm.css';
 
-const BookingForm = ({ availableTimes, onBookingSubmit }) => {
-  const [date, setDate] = useState('');
+const BookingForm = ({ date, setDate, availableTimes, onBookingSubmit }) => {
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
 
+  useEffect(() => {
+    if (availableTimes.length > 0) {
+      setTime(availableTimes[0]); // Set default time to the first available time
+    } else {
+      setTime(''); // Reset time if no available times
+    }
+  }, [availableTimes]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (time) { // Ensure time is selected
+    if (time) {
       onBookingSubmit({ date, time, guests, occasion });
+    } else {
+      alert('Please select a time.');
     }
   };
 
@@ -30,6 +39,7 @@ const BookingForm = ({ availableTimes, onBookingSubmit }) => {
         value={time}
         onChange={(e) => setTime(e.target.value)}
       >
+        <option value="">Select a time</option>
         {availableTimes.map((time, index) => (
           <option key={index} value={time}>{time}</option>
         ))}
