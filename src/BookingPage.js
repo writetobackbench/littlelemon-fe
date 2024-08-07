@@ -1,4 +1,3 @@
-// src/BookingPage.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BookingForm from './BookingForm';
@@ -11,8 +10,8 @@ const BookingPage = () => {
 
   useEffect(() => {
     if (date) {
-      const dateObj = new Date(date); // Ensure date is a Date object
-      if (fetchAPI) {
+      const dateObj = new Date(date); 
+            if (fetchAPI) {
         const fetchAvailableTimes = async () => {
           const times = await fetchAPI(dateObj);
           console.log('Fetched available times:', times);
@@ -27,9 +26,9 @@ const BookingPage = () => {
     try {
       const result = await submitAPI(formData);
       if (result) {
-        navigate('/confirmed-booking'); // Navigate to confirmation page
+        navigate('/confirmed-booking'); 
       } else {
-        // Handle failure case here
+        
         console.error('Submission failed');
       }
     } catch (error) {

@@ -23,13 +23,13 @@ select {
   box-sizing: border-box;
 }
 
-input[type="number"] {
+/*input[type="number"] {
   -moz-appearance: textfield; /* Hide the spinners in Firefox */
-}
+/*}*/
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none; /* Hide the spinners in Chrome and Safari */
+  -webkit-appearance: none; 
   margin: 0;
 }
 

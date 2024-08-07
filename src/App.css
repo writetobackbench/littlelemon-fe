@@ -3,8 +3,8 @@
   margin: 0;
 }.grid-container {
   display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-template-rows: auto auto 1fr auto; /* Adjust row heights: nav, header, main, footer */
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto auto 1fr auto; 
   grid-template-areas: 
     "nav"
     "header"

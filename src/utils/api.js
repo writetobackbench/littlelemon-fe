@@ -27,8 +27,6 @@ const submitAPI = function(formData) {
   return true;
 };
 
-// Export the functions you need
 export { fetchAPI, submitAPI };
-// Expose the functions to the global scope
 //window.fetchAPI = fetchAPI;
 //window.submitAPI = submitAPI;

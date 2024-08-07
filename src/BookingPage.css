@@ -1,6 +1,5 @@
 /* BookingPage.css */
 
-/* Style for the booking list container */
 .booking-list {
     display: flex;
     flex-direction: column;
@@ -9,7 +8,6 @@
     gap: 10px; /* Space between each slot */
   }
   
-  /* Style for each booking slot */
   .booking-slot {
     display: flex;
     justify-content: space-between;
@@ -23,20 +21,17 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Style for booked slots */
   .booking-slot.booked {
     background-color: #e0e0e0;
     color: #777;
     text-decoration: line-through;
   }
   
-  /* Style for available slots */
   .booking-slot.available {
     background-color: #fff;
     color: #333;
   }
   
-  /* Optional: Add hover effects for interactive elements */
   .booking-slot:hover {
     background-color: #f0f0f0;
   }

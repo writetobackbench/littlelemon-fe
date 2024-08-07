@@ -3,13 +3,23 @@ import './Main.css';
 import card1pic from './icons_assets/c1.jpg'
 import card2pic from './icons_assets/c2.jpg'
 import card3pic from './icons_assets/c3.jpg'
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const Main = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/order');
+  };
+
   return (
     <main className="main">
       <div className="row-2">
       <h1>This week Special Menu !</h1>
-      <button className="main-button">Order now</button>
+      <button className="main-button" onClick={handleButtonClick}>Order now</button>
       </div>
 
       <div className="row-2">

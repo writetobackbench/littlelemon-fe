@@ -14,9 +14,9 @@ const BookingForm = ({ date, setDate, availableTimes, onBookingSubmit }) => {
 
   useEffect(() => {
     if (availableTimes.length > 0) {
-      setSelectedTime(availableTimes[0]); // Set default time to the first available time
+      setSelectedTime(availableTimes[0]);
     } else {
-      setSelectedTime(''); // Reset time if no available times
+      setSelectedTime(''); 
     }
   }, [availableTimes]);
 

@@ -11,19 +11,19 @@
 }
 
 .logo {
-  width: 200px; /* Adjust the size as needed */
+  width: 200px;
   height: auto;
 }
 
 .nav-links {
-  list-style: none; /* Remove bullets */
-  display: flex; /* Display items in a row */
+  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li {
-  margin-left: 15px; /* Space between links */
+  margin-left: 15px;
 }
 
 .nav-links a {
@@ -34,5 +34,5 @@
 }
 
 .nav-links a:hover {
-  background-color: #575757; /* Change background on hover */
+  background-color: #575757;
 }

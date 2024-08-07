@@ -4,22 +4,22 @@
   gap: 20px; /* Space between rows */
   padding: 10px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  box-sizing: border-box; /* Ensure padding is included in width */
-  max-width: 1200px; /* Set a maximum width for the main container */
-  margin: 0 auto; /* Center the container horizontally */
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Row 1: Image on left, text on right */
 .row-1 {
   display: flex;
-  justify-content: space-between; /* Space between items for uniform spacing */
+  justify-content: space-between;
   align-items: center;
-  width: 100%; /* Make sure the row takes the full width of the container */
+  width: 100%;
 }
 
 .row-1 img {
-  max-width: 45%; /* Ensure the image scales within the container */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 45%;
+  height: auto;
   border: none;
   border-radius: 10px;
 }
@@ -32,24 +32,24 @@
 /* Row 2: 3 cards */
 .row-2 {
   display: flex;
-  justify-content: space-between; /* Space between items for uniform spacing */
-  width: 100%; /* Make sure the row takes the full width of the container */
+  justify-content: space-between; 
+  width: 100%; 
 }
 
 .card {
   flex: 1;
-  margin: 0 10px; /* Add space between cards */
+  margin: 0 10px; 
   padding: 20px;
   background-color: #e8e7e7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: left;
-  max-width: 30%; /* Ensure each card fits within the row width */
-  box-sizing: border-box; /* Ensure padding is included in width */
+  max-width: 30%; 
+  box-sizing: border-box; 
 }
 
 .card img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
 }
 
 /* Row 3: Testimonials */
@@ -58,7 +58,7 @@
   background-color: #f1f1f1;
   text-align: center;
   display: flex;
-  justify-content: center; /* Center the content */
+  justify-content: center; 
   flex-direction: column;
 }
 
@@ -72,5 +72,5 @@
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
-  align-self: center; /* Center the button */
+  align-self: center; 
 }

@@ -13,6 +13,5 @@
       "submitAPI": "readonly"
     },
     "rules": {
-      // Your custom rules here
     }
   }

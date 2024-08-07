@@ -1,7 +1,7 @@
 .footer {
   display: grid;
-  grid-template-rows: auto auto; /* 2 rows */
-  gap: 20px; /* Space between rows */
+  grid-template-rows: auto auto;
+  gap: 20px;
   padding: 30px;
   background-color: #4CAF50;
   color: white;
@@ -11,14 +11,14 @@
 /* Row 1: 3 columns */
 .footer-row-1 {
   display: grid;
-  grid-template-columns: 3fr 2fr 1fr; /* 3 columns */
-  gap: 50px; /* Adjusted gap for better alignment */
+  grid-template-columns: 3fr 2fr 1fr;
+  gap: 50px;
 }
 
 /* Column 1: Logo */
 .footer-logo {
   display: flex;
-  align-items: center; /* Centered vertically */
+  align-items: center;
 }
 
 .footer-logo img {
@@ -37,16 +37,16 @@
 .footer-nav li {
   color: white;
   list-style-type: none;
-  margin: 8px 0 5px 0; /* Vertical space between links */
+  margin: 8px 0 5px 0;
 }
 
 .footer-nav a {
   color: white;
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
 }
 
 .footer-nav a:hover {
-  text-decoration: none; /* Ensure no underline on hover */
+  text-decoration: none;
 }
 
 /* Column 3: Social media links */
@@ -59,8 +59,8 @@
 
 .footer-social a {
   color: white;
-  text-decoration: none; /* Remove underline from social media links */
-  margin: 5px 0; /* Vertical space between links */
+  text-decoration: none;
+  margin: 5px 0;
 }
 
 .footer-social a:hover {
